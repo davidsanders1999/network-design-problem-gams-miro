@@ -1,0 +1,7 @@
+*.gsp
+*.log
+*.lst
+*.pf
+*.trc
+_miro_gdxin_.gdx
+_miro_gdxout_.gdx
