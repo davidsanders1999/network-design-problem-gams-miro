@@ -16,19 +16,12 @@ v_subset(v) = no;
 Alias (v,i,j,u);
 
 
-
 *--Connections--*
 Set E(v, v) Set of all possible connections between the cities [v];
 Set E_subset(v,v) subset for connections depending on user based city selection;
     
 *Subset has been initilized as fully connected*
 E(v, i) = yes;
-
-
-
-
-
-
 
 
 *----Parameter & Scalar Definition----*
@@ -54,7 +47,6 @@ Singleton Set subtraintype(traintype) /ICE/;
 $offExternalInput
 
 
-
 *--Not diretly adaptable Parameters--*
 
 Parameters
@@ -75,12 +67,6 @@ c_display(v,v) additional parameter for displaying only the cost of constructed 
 t(v,v) subparameter [refering to selected subset of cities by user]
 d(v,v) subparameter [refering to selected subset of cities by user]
 c(v,v) subparameter [refering to selected subset of cities by user];
-
-
-
-
-
-
 
 
 *----User based reginal selection----*
@@ -140,12 +126,6 @@ If (Subcityselction('Metropolises'),
 );  
 
 
-
-
-
-
-
-
 *----Import Data via .gdx file----*
 
 $gdxIn data_general.gdx
@@ -162,12 +142,6 @@ $offText
 $gdxIn data_gravety model_V2.gdx 
 $load d_total
 $GDXIN
-
-
-
-
-
-
 
 
 *----Preparing Input Data----*
@@ -191,12 +165,6 @@ If (subtraintype('RE'),
 );
 
 
-
-
-
-
-
-
 *----Optimization Model----*
 
 *--Variables--*
@@ -209,7 +177,6 @@ G value of the objective function;
 
 Integer variable
 x(u,i,j) number of passengers starting their trip in u;
-
 
 
 *--Formulation of objective function and constraints--*
@@ -243,15 +210,7 @@ Bmin = max(B,G.l*1);
 Solve firstmodel min G using mip;
 
 
-
-
-
-
-
-
 *----Output preparation----*
-
-
 
 *Sum of all construction costs *
 totalcost = sum((v,i)$(y.l(v,i) = 1), c(v,i));
@@ -282,11 +241,6 @@ map(v,i,'travpass')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = travpass(v,i)
 map(v,i,'inhabitants')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = d(v,v);
 
 display buildedge, y.l;
-
-
-
-
-
 
 
 *----MIRO Output----*
