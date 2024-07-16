@@ -1,0 +1,401 @@
+{
+  "theme": "browser",
+  "customCss": false,
+  "layoutSettings": {
+    "maxTabsExpandedInput": 5,
+    "maxTabsExpandedOutput": 5,
+    "maxTabsExpandedPivotComp": 5,
+    "maxTabsExpandedSplitComp": 5,
+    "maxTabsExpandedTabComp": 5
+  },
+  "excelIncludeMeta": true,
+  "excelIncludeEmptySheets": true,
+  "defaultRendererOutput": "datatable",
+  "autoGenInputGraphs": true,
+  "storeLogFilesDuration": 7,
+  "defCompMode": "split",
+  "pivotCompSettings": {
+    "hidePivotControls": false,
+    "fixedColumns": true
+  },
+  "activateModules": {
+    "loadLocal": true,
+    "logFile": true,
+    "lstFile": true,
+    "attachments": true,
+    "hcube": false,
+    "downloadTempFiles": false
+  },
+  "aggregateWidgets": true,
+  "overwriteSheetOrder": {
+    "input": ["_widgets", "_widgets1"]
+  },
+  "overwriteAliases": {
+    "b": {
+      "newAlias": "maximum total cost allowed"
+    },
+    "_scalars": {
+      "newAlias": "Scalars"
+    },
+    "map": {
+      "newAlias": "Route map"
+    },
+    "totalcost": {
+      "newAlias": "Total cost needed"
+    },
+    "_scalars_out": {
+      "newAlias": "Network KPIs"
+    },
+    "totaltraveltime": {
+      "newAlias": "Total travel time needed"
+    },
+    "buildedge": {
+      "newAlias": "Constructed connections [yes / no]"
+    },
+    "t": {
+      "newAlias": "Travel time [h]"
+    },
+    "d": {
+      "newAlias": "All travelers [people]"
+    },
+    "totaltravelers": {
+      "newAlias": "Total travelers"
+    },
+    "travpass": {
+      "newAlias": "Passangers per connection [people]"
+    },
+    "bmin_display": {
+      "newAlias": "Budget fror minimal spanning tree"
+    },
+    "subcityselction": {
+      "newAlias": "subcityselction"
+    },
+    "subtraintype": {
+      "newAlias": "subtraintype"
+    },
+    "maxtree_general": {
+      "newAlias": "Budget for fully connected network"
+    },
+    "c_display": {
+      "newAlias": "Costs [Mrd. €]"
+    }
+  },
+  "roundingDecimals": 2,
+  "dataRendering": {
+    "_scalars_out": {
+      "outType": "valueBox",
+      "options": [
+        {
+          "totaltraveltime": {
+            "description": "Total travel time [h] [Objective Variable]",
+            "color": "yellow",
+            "round": 0,
+            "icon": {
+              "name": "asterisk",
+              "lib": "font-awesome"
+            }
+          }
+        },
+        {
+          "totaltravelers": {
+            "description": "Total travelers [people]",
+            "color": "aqua",
+            "round": 2,
+            "icon": {
+              "name": "users",
+              "lib": "font-awesome"
+            }
+          }
+        },
+        {
+          "totalcost": {
+            "description": "Total construction cost [Mrd. €]",
+            "color": "red",
+            "round": 2,
+            "icon": {
+              "name": "euro-sign",
+              "lib": "font-awesome"
+            }
+          }
+        },
+        {
+          "bmin_display": {
+            "description": "Budget of minimal spanning tree [Mrd. €]",
+            "color": "red",
+            "round": 2,
+            "icon": {
+              "name": "euro-sign",
+              "lib": "font-awesome"
+            }
+          },
+          "maxtree_general": {
+            "description": "Budget of fully connected network [Mrd. €]",
+            "color": "red",
+            "round": 2,
+            "icon": {
+              "name": "euro-sign",
+              "lib": "font-awesome"
+            }
+          }
+        }
+      ]
+    },
+    "map": {
+      "outType": "graph",
+      "graph": {
+        "tool": "leaflet",
+        "layersControl": {
+          "options": {
+            "collapsed": true
+          },
+          "position": "topright"
+        },
+        "markers": {
+          "1": {
+            "lng": "lats",
+            "lat": "longs",
+            "iconOptions": {
+              "icon": "circle-notch",
+              "iconColor": "",
+              "markerColor": "blue"
+            },
+            "labelOptions": {
+              "textsize": "12px",
+              "permanent": false
+            },
+            "label": "[v] ([inhabitants] Inhabitants)"
+          }
+        },
+        "flows": {
+          "1": {
+            "lng0": "lats",
+            "lat0": "longs",
+            "lng1": "latz",
+            "lat1": "longz",
+            "flow": "travpass",
+            "minThickness": 1,
+            "maxThickness": 10,
+            "layerId": "Passengers travelling from [v] to [i]"
+          }
+        }
+      },
+      "height": 700
+    }
+  },
+  "inputWidgets": {
+    "b": {
+      "widgetType": "slider",
+      "min": 0,
+      "max": 200,
+      "default": 35,
+      "step": 1,
+      "ticks": true,
+      "noHcube": false,
+      "label": "Budget",
+      "tooltip": "Based on your input, the maximum budget for the optimization is set."
+    },
+    "subcityselction": {
+      "widgetType": "dropdown",
+      "choices": ["Metropolises", "North", "East", "South", "West"],
+      "selected": "Metropolises",
+      "noHcube": false,
+      "clearValue": false,
+      "multiple": false,
+      "label": "Region",
+      "tooltip": "Based on your selection, different cities will be included in the optimization."
+    },
+    "subtraintype": {
+      "widgetType": "dropdown",
+      "choices": ["ICE", "RE"],
+      "selected": "ICE",
+      "noHcube": false,
+      "clearValue": false,
+      "multiple": false,
+      "label": "Train Type",
+      "tooltip": "Based on your selection, different construction cost an travel times will be included in the optimization."
+    }
+  },
+  "outputTables": {
+    "buildedge": {
+      "pivotCols": "v",
+      "class": "cell-border",
+      "filter": "none",
+      "options": {
+        "pageLength": 100,
+        "decimals": 0,
+        "buttons": ["csv", "excel", "pdf"],
+        "dom": "Bfrtip"
+      },
+      "rownames": false,
+      "extensions": "Buttons"
+    },
+    "t": {
+      "pivotCols": "v",
+      "class": "cell-border",
+      "filter": "none",
+      "options": {
+        "pageLength": 100,
+        "decimals": 2,
+        "buttons": ["csv", "excel", "pdf"],
+        "dom": "Bfrtip"
+      },
+      "rownames": false,
+      "extensions": "Buttons"
+    },
+    "d": {
+      "pivotCols": "v",
+      "class": "cell-border",
+      "filter": "none",
+      "options": {
+        "pageLength": 100,
+        "decimals": 2,
+        "buttons": ["csv", "excel", "pdf"],
+        "dom": "Bfrtip"
+      },
+      "rownames": false,
+      "extensions": "Buttons"
+    },
+    "c": {
+      "pivotCols": "v",
+      "class": "cell-border",
+      "filter": "none",
+      "options": {
+        "pageLength": 100,
+        "decimals": 0,
+        "buttons": ["csv", "excel", "pdf"],
+        "dom": "Bfrtip"
+      },
+      "rownames": false,
+      "extensions": "Buttons"
+    },
+    "c_display": {
+      "pivotCols": "v",
+      "class": "cell-border",
+      "filter": "none",
+      "options": {
+        "pageLength": 100,
+        "decimals": 2,
+        "buttons": ["csv", "excel", "pdf"],
+        "dom": "Bfrtip"
+      },
+      "rownames": false,
+      "extensions": "Buttons"
+    },
+    "travpass": {
+      "class": "cell-border",
+      "filter": "none",
+      "options": {
+        "pageLength": 15,
+        "decimals": 3,
+        "buttons": ["csv", "excel", "pdf"],
+        "dom": "Bfrtip"
+      },
+      "rownames": false,
+      "extensions": "Buttons"
+    },
+    "map": {
+      "class": "cell-border",
+      "filter": "none",
+      "options": {
+        "pageLength": 15,
+        "decimals": 3,
+        "buttons": ["csv", "excel", "pdf"],
+        "dom": "Bfrtip"
+      },
+      "rownames": false,
+      "extensions": "Buttons"
+    },
+    "_scalars_out": {
+      "class": "cell-border",
+      "filter": "none",
+      "options": {
+        "pageLength": 15,
+        "decimals": 2,
+        "buttons": ["csv", "excel", "pdf"],
+        "dom": "Bfrtip"
+      },
+      "rownames": false,
+      "extensions": "Buttons"
+    }
+  },
+  "readme": {
+    "tabTitle": "Global Information",
+    "filename": "Information",
+    "enableMath": true
+  },
+  "scripts": {
+    "base": []
+  },
+  "pageTitle": "Network Design Problem | User-friendly Interface",
+  "UILogo": "SCR-20240714-rkis.png",
+  "overwriteHeaderAliases": {
+    "travpass": {
+      "newHeaders": ["Cities", "Cities", "Passengers"]
+    },
+    "buildedge": {
+      "newHeaders": ["Cities", "Cities", "buildedge"]
+    },
+    "t": {
+      "newHeaders": ["Cities", "Cities", "value of travel time for the direct trip from i to j"]
+    },
+    "d": {
+      "newHeaders": ["Cities", "Cities", "d"]
+    },
+    "map": {
+      "newHeaders": ["Cities", "Cities", "Lateral Start", "Longitudinal Start", "Lateral End", "Longitudinal End", "Passengers", "Inhabitants"]
+    },
+    "_scalars_out": {
+      "newHeaders": ["Parameter", "Description", "Value"]
+    },
+    "c_display": {
+      "newHeaders": ["Cities", "Cities", "additional parameter for displaying only the cost of constructed connectinos"]
+    }
+  },
+  "datatable": {
+    "class": "cell-border",
+    "filter": "none",
+    "options": {
+      "buttons": ["csv", "excel", "pdf"],
+      "dom": "Bfrtip",
+      "pageLength": 15
+    },
+    "extensions": "Buttons",
+    "rownames": false
+  },
+  "defaultScenName": "Metropolises | ICE | High",
+  "inputWidgetGroups": [
+    {
+      "name": "User Input",
+      "members": ["subcityselction", "subtraintype", "b"],
+      "sameTab": true
+    }
+  ],
+  "outputGroups": [
+    {
+      "name": "Management Summary",
+      "members": ["_scalars_out", "map"],
+      "sameTab": false
+    },
+    {
+      "name": "Output Data Sheet ",
+      "members": ["travpass", "buildedge"],
+      "sameTab": false
+    },
+    {
+      "name": "Input Data Sheets",
+      "members": ["c_display", "t", "d"],
+      "sameTab": false
+    }
+  ],
+  "handsontable": {
+    "stretchH": "none",
+    "readonly": false,
+    "contextMenu": {
+      "enabled": true,
+      "allowRowEdit": true,
+      "allowColEdit": true
+    },
+    "height": 700,
+    "colWidths": 200
+  }
+}

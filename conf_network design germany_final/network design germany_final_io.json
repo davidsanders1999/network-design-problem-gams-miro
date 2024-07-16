@@ -1,0 +1,175 @@
+{
+	"modelTitle":	"G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m",
+	"inputSymbols":	{
+		"_scalars":	{
+			"alias":	"Input Scalars",
+			"symnames":	["b", "subcityselction", "subtraintype"],
+			"symtext":	["maximum total cost allowed", "subcityselction", "subtraintype"],
+			"symtypes":	["parameter", "set", "set"],
+			"headers":	{
+				"scalar":	{
+					"type":	"string",
+					"alias":	"Scalar Name"
+				},
+				"description":	{
+					"type":	"string",
+					"alias":	"Scalar Description"
+				},
+				"value":	{
+					"type":	"string",
+					"alias":	"Scalar Value"
+				}
+			}
+		}
+	},
+	"outputSymbols":	{
+		"_scalars_out":	{
+			"alias":	"Output Scalars",
+			"symnames":	["bmin_display", "totalcost", "totaltraveltime", "totaltravelers", "maxtree_general"],
+			"symtext":	["min budget for display in GAMS Miro", "final cummulated construction costs of all built connections", "final cummulated travel time of all passengers (objective value)", "cummulated number of pessengers", "budget for the fully connected"],
+			"symtypes":	["parameter", "parameter", "parameter", "parameter", "parameter"],
+			"headers":	{
+				"scalar":	{
+					"type":	"string",
+					"alias":	"Scalar Name"
+				},
+				"description":	{
+					"type":	"string",
+					"alias":	"Scalar Description"
+				},
+				"value":	{
+					"type":	"string",
+					"alias":	"Scalar Value"
+				}
+			}
+		},
+		"travpass":	{
+			"alias":	"cummulated number of passengers for each edge",
+			"symtype":	"parameter",
+			"headers":	{
+				"v":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"v#1":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"value":	{
+					"type":	"numeric",
+					"alias":	"cummulated number of passengers for each edge"
+				}
+			}
+		},
+		"buildedge":	{
+			"alias":	"information if connection is built",
+			"symtype":	"parameter",
+			"headers":	{
+				"v":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"v#1":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"value":	{
+					"type":	"numeric",
+					"alias":	"information if connection is built"
+				}
+			}
+		},
+		"c_display":	{
+			"alias":	"additional parameter for displaying only the cost of constructed connectinos",
+			"symtype":	"parameter",
+			"headers":	{
+				"v":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"v#1":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"value":	{
+					"type":	"numeric",
+					"alias":	"additional parameter for displaying only the cost of constructed connectinos"
+				}
+			}
+		},
+		"t":	{
+			"alias":	"subparameter [refering to selected subset of cities by user]",
+			"symtype":	"parameter",
+			"headers":	{
+				"v":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"v#1":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"value":	{
+					"type":	"numeric",
+					"alias":	"subparameter [refering to selected subset of cities by user]"
+				}
+			}
+		},
+		"d":	{
+			"alias":	"subparameter [refering to selected subset of cities by user]",
+			"symtype":	"parameter",
+			"headers":	{
+				"v":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"v#1":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"value":	{
+					"type":	"numeric",
+					"alias":	"subparameter [refering to selected subset of cities by user]"
+				}
+			}
+		},
+		"map":	{
+			"alias":	"map",
+			"symtype":	"parameter",
+			"headers":	{
+				"v":	{
+					"type":	"string",
+					"alias":	"Sets of all selectable german cities"
+				},
+				"i":	{
+					"type":	"string",
+					"alias":	"Aliased with v"
+				},
+				"lats":	{
+					"type":	"numeric",
+					"alias":	"lats"
+				},
+				"longs":	{
+					"type":	"numeric",
+					"alias":	"longs"
+				},
+				"latz":	{
+					"type":	"numeric",
+					"alias":	"latz"
+				},
+				"longz":	{
+					"type":	"numeric",
+					"alias":	"longz"
+				},
+				"travpass":	{
+					"type":	"numeric",
+					"alias":	"travpass"
+				},
+				"inhabitants":	{
+					"type":	"numeric",
+					"alias":	"inhabitants"
+				}
+			}
+		}
+	}
+}
