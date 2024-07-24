@@ -240,7 +240,8 @@ map(v,i,'longz')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = long(i);
 map(v,i,'travpass')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = travpass(v,i);
 map(v,i,'inhabitants')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = d(v,v);
 
-display buildedge, y.l;
+*Display of important variables & parameters for error detection
+display buildedge, y.l, totalcost, c_display;
 
 
 *----MIRO Output----*
@@ -251,7 +252,6 @@ Table     map(v,i, mapHdr);
 Parameter totalcost;
 Parameter totaltraveltime;
 Parameter buildedge (v,i);
-*Parameter c(v,i);
 Parameter c_display;
 Parameter d(v,i);
 Parameter t(v,i);

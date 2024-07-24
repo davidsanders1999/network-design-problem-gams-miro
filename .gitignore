@@ -1,5 +1,6 @@
 *.gsp
 *.log
+*.log
 *.lst
 *.pf
 *.trc
@@ -8,4 +9,6 @@ _miro_gdxout_.gdx
 model.gdx
 Network Design Germany_final.log~1
 Network Design Germany_final.lxi
-.DS_Store
+*.DS_Store
+*.log~2
+*.log~3
