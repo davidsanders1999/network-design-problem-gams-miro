@@ -14,7 +14,7 @@ v_subset(v) = no;
 
 *Alternitive indices for cities [v]*
 Alias (v,i,j,u);
-
+display v;
 
 *--Connections--*
 Set E(v, v) Set of all possible connections between the cities [v];
