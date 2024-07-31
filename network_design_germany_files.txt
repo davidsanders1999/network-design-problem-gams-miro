@@ -1,0 +1,15 @@
+Information
+conf_network_design_germany/network_design_germany.json
+conf_network_design_germany/network_design_germany_io.json
+data_general.gdx
+data_gravety model_V2.gdx
+data_network_design_germany/Metro_RE.gdx
+data_network_design_germany/default.gdx
+network_design_germany.gms
+static_network_design_germany/Download.png
+static_network_design_germany/Graph1.png
+static_network_design_germany/Graph2.png
+static_network_design_germany/Intropage.png
+static_network_design_germany/SCR-20240714-rkis.png
+static_network_design_germany/app_info.json
+static_network_design_germany/app_logo.jpeg
