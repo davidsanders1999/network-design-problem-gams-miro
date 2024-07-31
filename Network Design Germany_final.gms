@@ -213,7 +213,7 @@ Solve firstmodel min G using mip;
 *----Output preparation----*
 
 *Sum of all construction costs *
-totalcost = sum((v,i)$(y.l(v,i) = 1), c(v,i));
+totalcost = sum((v,i)$(E(i,v)), c(v,i)*y.l(v,i));
 
 *Sum of travelling passengers for each connection*
 travpass(v,i)=sum(u, X.l(u,v,i));
@@ -233,12 +233,12 @@ Set mapHdr / lats, longs, latz, longz, travpass, inhabitants/;
 Table map(v,i, mapHdr);
 
 *Transfering information of geodata and travelling passengers to map *
-map(v,i,'lats')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = lat(v);
-map(v,i,'longs')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = long(v);
-map(v,i,'latz')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = lat(i);
-map(v,i,'longz')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = long(i);
-map(v,i,'travpass')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = travpass(v,i);
-map(v,i,'inhabitants')$(buildedge (v,i) = 1 or buildedge (i,v) = 1) = d(v,v);
+map(v,i,'lats')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = lat(v);
+map(v,i,'longs')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = long(v);
+map(v,i,'latz')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = lat(i);
+map(v,i,'longz')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = long(i);
+map(v,i,'travpass')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = travpass(v,i);
+map(v,i,'inhabitants')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = d(v,v);
 
 *Display of important variables & parameters for error detection
 display buildedge, y.l, totalcost, c_display;
