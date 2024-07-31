@@ -1,13 +1,12 @@
---- /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro
---- Job network_design_germany.gms Start 07/31/24 19:35:13 46.4.0 2cbe6e3b DAX-DAC arm 64bit/macOS
+
+--- Job network_design_germany.gms Start 07/31/24 21:01:10 46.4.1 485757e2 DAX-DAC arm 64bit/macOS
 --- Applying:
     /Library/Frameworks/GAMS.framework/Versions/46/Resources/gmsprmun.txt
-    /Users/noahschuster/Library/Preferences/GAMS/gamsconfig.yaml
 --- GAMS Parameters defined
-    Input /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    Input /Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
     PageSize 0
     Action C
-    ScrDir /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/225a/
+    ScrDir /Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/225a/
     SysDir /Library/Frameworks/GAMS.framework/Versions/46/Resources/
     LogOption 3
     ErrMsg 1
@@ -21,19 +20,18 @@ Licensee: Course License                                 S240715|0002AO-GEN
           License Admin: reyes@analytics.rwth-aachen.de                    
           Course license for use within the course and related course work
           The evaluation period of the license will expire on Dec 12, 2024
-Processor information: 1 socket(s), 12 core(s), and 12 thread(s) available
-GAMS 46.4.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+Processor information: 1 socket(s), 8 core(s), and 8 thread(s) available
+GAMS 46.4.1   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
 --- network_design_germany.gms(131) 3 Mb
---- GDXin=/Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/data_general.gdx
---- GDX File ($gdxIn) /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/data_general.gdx
+--- GDXin=/Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/data_general.gdx
+--- GDX File ($gdxIn) /Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/data_general.gdx
 --- network_design_germany.gms(142) 3 Mb
---- GDXin=/Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/data_gravety model_V2.gdx
---- GDX File ($gdxIn) /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/data_gravety model_V2.gdx
+--- GDXin=/Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/data_gravety model_V2.gdx
+--- GDX File ($gdxIn) /Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/data_gravety model_V2.gdx
 --- network_design_germany.gms(264) 3 Mb
 *** Status: Normal completion
---- Job network_design_germany.gms Stop 07/31/24 19:35:13 elapsed 0:00:00.006
-Warnung: You specified an output table for the symbol(s): 'NA'. This/these symbol(s) is/are not part of the data contract between GAMS and MIROINFO [2024-07-31 19:35:14] Generating miroapp file...
-INFO [2024-07-31 19:35:15] Successfully deployed MIRO app to: /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.miroapp
-
-network_design_germany.miroapp successfully deployed to location 
+--- Job network_design_germany.gms Stop 07/31/24 21:01:10 elapsed 0:00:00.006
+Warnung: You specified an output table for the symbol(s): 'NA'. This/these symbol(s) is/are not part of the data contract between GAMS and MIROINFO [2024-07-31 21:01:24] Compressing model files...
+Warnung: 
+Problems creating file: 'network_design_germany.zip'. Error message: 'Some files do not exist: data_network_design_germany/Metro_ICE.miroscen'.Error deploying network_design_germany.miroapp (MIRO exit code 1) to location 
