@@ -1,37 +1,70 @@
 
---- Job network_design_germany.gms Start 07/31/24 21:01:10 46.4.1 485757e2 DAX-DAC arm 64bit/macOS
+--- Job network_design_germany.gms Start 08/01/24 14:27:30 46.4.0 2cbe6e3b DAX-DAC arm 64bit/macOS
 --- Applying:
     /Library/Frameworks/GAMS.framework/Versions/46/Resources/gmsprmun.txt
+    /Users/noahschuster/Library/Preferences/GAMS/gamsconfig.yaml
 --- GAMS Parameters defined
-    Input /Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    Input /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
     PageSize 0
-    Action C
-    ScrDir /Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/225a/
+    ScrDir /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/225a/
     SysDir /Library/Frameworks/GAMS.framework/Versions/46/Resources/
     LogOption 3
     ErrMsg 1
     ErrorLog 99
     IDE 1
     LstTitleLeftAligned 1
-    IDCJSON conf_network_design_germany/network_design_germany_io.json
 Licensee: Course License                                 S240715|0002AO-GEN
           RWTH Aachen University,                                   DCE3022
           /Library/Frameworks/GAMS.framework/Versions/46/Resources/gamslice.txt
           License Admin: reyes@analytics.rwth-aachen.de                    
           Course license for use within the course and related course work
           The evaluation period of the license will expire on Dec 12, 2024
-Processor information: 1 socket(s), 8 core(s), and 8 thread(s) available
-GAMS 46.4.1   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+Processor information: 1 socket(s), 12 core(s), and 12 thread(s) available
+GAMS 46.4.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
+--- network_design_germany.gms(1) 2 Mb 3 Errors
+*** Error 140 in /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    Unknown symbol
+*** Error  36 in /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    '=' or '..' or ':=' or '$=' operator expected
+    rest of statement ignored
+*** Error  96 in /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    Blank needed between identifier and text
+      (-or- illegal character in identifier)
+      (-or- check for missing ';' on previous line)
 --- network_design_germany.gms(131) 3 Mb
---- GDXin=/Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/data_general.gdx
---- GDX File ($gdxIn) /Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/data_general.gdx
+--- GDXin=/Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/data_general.gdx
+--- GDX File ($gdxIn) /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/data_general.gdx
 --- network_design_germany.gms(142) 3 Mb
---- GDXin=/Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/data_gravety model_V2.gdx
---- GDX File ($gdxIn) /Users/davidsanders/Documents/GitHub/network-design-problem-gams-miro/data_gravety model_V2.gdx
---- network_design_germany.gms(264) 3 Mb
-*** Status: Normal completion
---- Job network_design_germany.gms Stop 07/31/24 21:01:10 elapsed 0:00:00.006
-Warnung: You specified an output table for the symbol(s): 'NA'. This/these symbol(s) is/are not part of the data contract between GAMS and MIROINFO [2024-07-31 21:01:24] Compressing model files...
-Warnung: 
-Problems creating file: 'network_design_germany.zip'. Error message: 'Some files do not exist: data_network_design_germany/Metro_ICE.miroscen'.Error deploying network_design_germany.miroapp (MIRO exit code 1) to location 
+--- GDXin=/Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/data_gravety model_V2.gdx
+--- GDX File ($gdxIn) /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/data_gravety model_V2.gdx
+--- network_design_germany.gms(205) 3 Mb 4 Errors
+*** Error 257 in /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    Solve statement not checked because of previous errors
+--- network_design_germany.gms(207) 3 Mb 5 Errors
+*** Error 141 in /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement. Suppress with $onImplicitAssign.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- network_design_germany.gms(210) 3 Mb 6 Errors
+*** Error 257 in /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    Solve statement not checked because of previous errors
+--- network_design_germany.gms(216) 3 Mb 7 Errors
+*** Error 141 in /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement. Suppress with $onImplicitAssign.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- network_design_germany.gms(219) 3 Mb 8 Errors
+*** Error 141 in /Users/noahschuster/Documents/GitHub/network-design-problem-gams-miro/network_design_germany.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement. Suppress with $onImplicitAssign.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- network_design_germany.gms(264) 3 Mb 8 Errors
+*** Status: Compilation error(s)
+--- Job network_design_germany.gms Stop 08/01/24 14:27:30 elapsed 0:00:00.007

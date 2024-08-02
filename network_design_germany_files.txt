@@ -3,7 +3,36 @@ conf_network_design_germany/network_design_germany.json
 conf_network_design_germany/network_design_germany_io.json
 data_general.gdx
 data_gravety model_V2.gdx
-data_network_design_germany/Metro_RE.gdx
+data_network_design_germany/East | High | ICE.gdx
+data_network_design_germany/East | High | RE.gdx
+data_network_design_germany/East | Low | ICE.gdx
+data_network_design_germany/East | Low | RE.gdx
+data_network_design_germany/East | Medium | ICE.gdx
+data_network_design_germany/East | Medium | RE.gdx
+data_network_design_germany/Metro | High | ICE.gdx
+data_network_design_germany/Metro | High | RE.gdx
+data_network_design_germany/Metro | Low | ICE.gdx
+data_network_design_germany/Metro | Low | RE.gdx
+data_network_design_germany/Metro | Medium | ICE.gdx
+data_network_design_germany/Metro | Medium | RE.gdx
+data_network_design_germany/North | High | ICE.gdx
+data_network_design_germany/North | High | RE.gdx
+data_network_design_germany/North | Low | ICE.gdx
+data_network_design_germany/North | Low | RE.gdx
+data_network_design_germany/North | Medium | ICE.gdx
+data_network_design_germany/North | Medium | RE.gdx
+data_network_design_germany/South | High | ICE.gdx
+data_network_design_germany/South | High | RE.gdx
+data_network_design_germany/South | Low | ICE.gdx
+data_network_design_germany/South | Low | RE.gdx
+data_network_design_germany/South | Medium | ICE.gdx
+data_network_design_germany/South | Medium | RE.gdx
+data_network_design_germany/West | High | ICE.gdx
+data_network_design_germany/West | High | RE.gdx
+data_network_design_germany/West | Low | ICE.gdx
+data_network_design_germany/West | Low | RE.gdx
+data_network_design_germany/West | Medium | ICE.gdx
+data_network_design_germany/West | Medium | RE.gdx
 data_network_design_germany/default.gdx
 network_design_germany.gms
 static_network_design_germany/Download.png
