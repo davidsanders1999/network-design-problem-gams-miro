@@ -13,3 +13,4 @@ model.gdx
 *.log~2
 *.log~3
 default.gdx
+*lxi
