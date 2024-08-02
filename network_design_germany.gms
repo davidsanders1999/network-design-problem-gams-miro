@@ -139,7 +139,7 @@ It emphasizes the importance of balancing, ensuring that total trip productions 
 This balance maintains the proportional relationship between origins and destinations, reflecting realistic travel patterns.
 $offText
 
-$gdxIn data_gravety model_V2.gdx 
+$gdxIn data_gravety model.gdx 
 $load d_total
 $GDXIN
 
