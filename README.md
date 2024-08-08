@@ -2,11 +2,10 @@
 
 <div>
   <strong>Additional Linkcollection</strong>
-   <p>
-
-  <br><br><br><br>
-  LINK
-   
+  <br><br>
+  LINK<br>
+  LINK<br>
+  LINK<br>
 
 </div>
     
