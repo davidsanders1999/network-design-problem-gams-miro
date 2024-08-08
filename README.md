@@ -1,4 +1,4 @@
-  <img src="static_network_design_germany/Intropage.png">
+<img src="static_network_design_germany/Intropage.png">
 
 <div>
   <strong>Additional Linkcollection</strong>
