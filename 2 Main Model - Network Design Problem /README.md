@@ -1,12 +1,11 @@
-  <img src="static_network_design_germany/Intropage.png">
+<img src="static_network_design_germany/Intropage.png">
 
 <div>
   <strong>Additional Linkcollection</strong>
-   <p>
-
-  <br><br><br><br>
-  LINK
-   
+  <br><br>
+  Learn more about the Network Design Model in the PAPER<br>
+  Learn more about the Gravety Model in the linkin REPOSITORY<br>
+  Lean more about the f<br>
 
 </div>
     
