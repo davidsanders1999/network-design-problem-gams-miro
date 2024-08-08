@@ -1,8 +1,8 @@
   <img src="static_network_design_germany/Intropage.png">
 
 <div>
-  <strong>Additional Links</strong>
-  <br>
+  <strong>Additional Linkcollection</strong>
+   <p>
   <br>
   LINK
   <br>
