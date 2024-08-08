@@ -3,8 +3,7 @@
 <div>
   <strong>Additional Linkcollection</strong>
    <p>
-  LINK
-  LINK
+
   <br><br><br><br>
   LINK
    
