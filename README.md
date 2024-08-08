@@ -2,11 +2,12 @@
 
 <div>
   <strong>Additional Links</strong>
-  <br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Additional Links
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LINK
-    <br>
+  <br>
+  <br>
+  LINK
+  <br>
+  LINK
+  <br>
    
 
 </div>
