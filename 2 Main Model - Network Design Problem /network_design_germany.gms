@@ -79,7 +79,6 @@ If (Subcityselction('East'),
     v_subset('Erfurt') = yes;
     v_subset('Chemnitz') = yes;
     v_subset('Dresden') = yes;
-    maxtree_general = 98.05;
 );    
 
 If (Subcityselction('West'),
@@ -90,7 +89,6 @@ If (Subcityselction('West'),
     v_subset('Muenster') = yes;
     v_subset('Dortmund') = yes;
     v_subset('Duesseldorf') = yes;
-    maxtree_general = 103.89;
 );    
 
 If (Subcityselction('South'),
@@ -101,7 +99,6 @@ If (Subcityselction('South'),
     v_subset('Freiburg') = yes;
     v_subset('Regensburg') = yes;
     v_subset('Nuernberg') = yes;
-    maxtree_general = 127.58;
 );    
 
 If (Subcityselction('North'),
@@ -112,7 +109,6 @@ If (Subcityselction('North'),
     v_subset('Osnabrueck') = yes;
     v_subset('Hannover') = yes;
     v_subset('Goettingen') = yes;
-    maxtree_general = 112.63;
 );    
 
 If (Subcityselction('Metropolises'),
@@ -122,7 +118,6 @@ If (Subcityselction('Metropolises'),
     v_subset('Koeln') = yes;
     v_subset('Frankfurt') = yes;
     v_subset('Stuttgart') = yes;
-    maxtree_general = 176.13;
 );  
 
 
@@ -156,8 +151,12 @@ t(v,i)$(v_subset(v) and v_subset(i)) = t_total(v,i);
 d(v,i)$(v_subset(v) and v_subset(i)) = d_total(v,i);
 E(v, i)$(v_subset(v) and v_subset(i)) = yes;
 
+*Calculation of the budget for the fully connected network
+maxtree_general = (sum ((v,i)$(v_subset(v) and v_subset(i)), c(v,i)))/2;
+
 *Adapting c and t according to the selection of the train type*
 *Assuming that the travel time in a regional express (RE) doubles and the construction costs are halved*
+
 If (subtraintype('RE'),
     c(v,i)$(v_subset(v) and v_subset(i)) = c(v,i)* 0.5;
     t(v,i)$(v_subset(v) and v_subset(i)) = t(v,i) * 2;
