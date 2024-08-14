@@ -25,8 +25,8 @@
 	"outputSymbols":	{
 		"_scalars_out":	{
 			"alias":	"Output Scalars",
-			"symnames":	["bmin_display", "totalcost", "totaltraveltime", "totaltravelers", "maxtree_general"],
-			"symtext":	["min budget for display in GAMS Miro", "final cummulated construction costs of all built connections", "final cummulated travel time of all passengers (objective value)", "cummulated number of pessengers", "budget for the fully connected"],
+			"symnames":	["b_min_display", "b_max", "totalcost", "totaltraveltime", "totaltravelers"],
+			"symtext":	["min budget for display in GAMS Miro", "budget for the fully connected", "final cummulated construction costs of all built connections", "final cummulated travel time of all passengers (objective value)", "cummulated number of pessengers"],
 			"symtypes":	["parameter", "parameter", "parameter", "parameter", "parameter"],
 			"headers":	{
 				"scalar":	{

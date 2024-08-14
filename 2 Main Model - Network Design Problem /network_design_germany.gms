@@ -50,8 +50,9 @@ $offExternalInput
 *--Not diretly adaptable Parameters--*
 
 Parameters
-Bmin_display min budget for display in GAMS Miro
-Bmin min budget to ensure a feasible solution
+b_min_display min budget for display in GAMS Miro
+b_min min budget to ensure a feasible solution
+b_max budget for the fully connected
 long(v) longitudal value of cities
 lat(v) latitudal value of cities
 totalcost final cummulated construction costs of all built connections
@@ -59,7 +60,6 @@ totaltraveltime final cummulated travel time of all passengers (objective value)
 travpass(v,v) cummulated number of passengers for each edge 
 totaltravelers cummulated number of pessengers 
 buildedge (v,v) information if connection is built
-maxtree_general budget for the fully connected
 t_total(v,v) travel time between cities
 d_total(v,v) number of passengers travelling between cities 
 c_total(v,v) fixed construction costs for connection between cities
@@ -152,7 +152,7 @@ d(v,i)$(v_subset(v) and v_subset(i)) = d_total(v,i);
 E(v, i)$(v_subset(v) and v_subset(i)) = yes;
 
 *Calculation of the budget for the fully connected network
-maxtree_general = (sum ((v,i)$(v_subset(v) and v_subset(i)), c(v,i)))/2;
+b_max = (sum ((v,i)$(v_subset(v) and v_subset(i)), c(v,i)))/2;
 
 *Adapting c and t according to the selection of the train type*
 *Assuming that the travel time in a regional express (RE) doubles and the construction costs are halved*
@@ -160,7 +160,7 @@ maxtree_general = (sum ((v,i)$(v_subset(v) and v_subset(i)), c(v,i)))/2;
 If (subtraintype('RE'),
     c(v,i)$(v_subset(v) and v_subset(i)) = c(v,i)* 0.5;
     t(v,i)$(v_subset(v) and v_subset(i)) = t(v,i) * 2;
-    maxtree_general = maxtree_general / 2;
+    b_max = b_max * 0.5;
 );
 
 
@@ -193,7 +193,7 @@ Equation coupling;
 Coupling(u,i,j)$(E(i,j) and ord(i)< ord(j))..X(u,i,j)+x(u,j,i)=l=d(u,u)*y(i,j);
 
 Equation budget;
-budget..sum((i,j)$(E(i,j) and ord(i)<ord(j)),c(i,j)*y(i,j))=l=Bmin;
+budget..sum((i,j)$(E(i,j) and ord(i)<ord(j)),c(i,j)*y(i,j))=l=b_min;
 
 Model firstModel /objectivefunction,flow,coupling, budget/;
 
@@ -203,8 +203,8 @@ option optCR=0;
 
 Solve approxspanningtree min G using mip;
 
-Bmin_display = G.l;
-Bmin = max(B,G.l*1);
+b_min_display = G.l;
+b_min = max(B,G.l*1);
 
 Solve firstmodel min G using mip;
 
@@ -232,12 +232,12 @@ Set mapHdr / lats, longs, latz, longz, travpass, inhabitants/;
 Table map(v,i, mapHdr);
 
 *Transfering information of geodata and travelling passengers to map *
-map(v,i,'lats')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = lat(v);
-map(v,i,'longs')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = long(v);
-map(v,i,'latz')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = lat(i);
-map(v,i,'longz')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = long(i);
-map(v,i,'travpass')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = travpass(v,i);
-map(v,i,'inhabitants')$(buildedge (v,i) >= 0.9 or buildedge (i,v) >= 0.9) = d(v,v);
+map(v,i,'lats')$(y.l (v,i) >= 0.9 or y.l (i,v) >= 0.9) = lat(v);
+map(v,i,'longs')$(y.l (v,i) >= 0.9 or y.l (i,v) >= 0.9) = long(v);
+map(v,i,'latz')$(y.l (v,i) >= 0.9 or y.l (i,v) >= 0.9) = lat(i);
+map(v,i,'longz')$(y.l (v,i) >= 0.9 or y.l (i,v) >= 0.9) = long(i);
+map(v,i,'travpass')$(y.l (v,i) >= 0.9 or y.l (i,v) >= 0.9) = travpass(v,i);
+map(v,i,'inhabitants')$(y.l (v,i) >= 0.9 or y.l (i,v) >= 0.9) = d(v,v);
 
 *Display of important variables & parameters for error detection
 display buildedge, y.l, totalcost, c_display;
@@ -256,8 +256,8 @@ Parameter d(v,i);
 Parameter t(v,i);
 Parameter travpass(i,j);
 Parameter totaltravelers;
-Parameter maxtree_general;
-Parameter Bmin_display;
+Parameter b_max;
+Parameter b_min_display;
 $offExternalOutput
 
 execute_unload "model.gdx";
