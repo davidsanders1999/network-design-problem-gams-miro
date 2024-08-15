@@ -384,7 +384,7 @@
             "newAlias": "Constructed connections [yes / no]"
         },
         "c_display": {
-            "newAlias": "Costs [Mrd. <U+20AC>]"
+            "newAlias": "Costs [Mrd. Euro]"
         },
         "d": {
             "newAlias": "All travelers [people]"
