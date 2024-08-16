@@ -1,0 +1,2 @@
+* GAMS Code to read from Excel and use the data
+$call GDXXRW.EXE "C:\Users\David\Desktop\data_general.xlsx" par=inhabitants rng=Geo_Data!a2:b29 rdim=1 par=long rng=Geo_Data!e2:f29 rdim=1 par=lat rng=Geo_Data!i2:j29 rdim=1 par=c_total rng=Construction_Cost!a1:ac29 par=t_total rng=Travel_Time!a1:ac29

@@ -1,0 +1,10 @@
+<img src="static_network design minimize travel time\Graph1.png" style="width:55%;"/>
+
+The graph above illustrates the 5 cities and proposed connections between them. The periodized fixed costs for the construction and value of travel time for the direct trip between 2 cities are displayed along with the edge. 
+
+We also have the 2 tabs showing the expected number of passengers travelling between cities and the construction budget. 
+
+The model objective to minimize travelling time between cities, while ensures the flow conservation and construction cost under budget.
+
+A part of the output from this model, which is the built connections is brought to the line planning problem, as input.
+ 

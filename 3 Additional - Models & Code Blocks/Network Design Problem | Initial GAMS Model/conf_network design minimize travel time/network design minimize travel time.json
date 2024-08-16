@@ -1,0 +1,102 @@
+{
+  "theme": "browser",
+  "customCss": false,
+  "excelIncludeMeta": true,
+  "excelIncludeEmptySheets": true,
+  "defaultRendererOutput": "miroPivot",
+  "autoGenInputGraphs": true,
+  "storeLogFilesDuration": 7,
+  "defCompMode": "split",
+  "pivotCompSettings": {
+    "hidePivotControls": false,
+    "fixedColumns": true
+  },
+  "activateModules": {
+    "loadLocal": true,
+    "logFile": true,
+    "lstFile": true,
+    "attachments": true,
+    "hcube": false,
+    "downloadTempFiles": false
+  },
+  "aggregateWidgets": true,
+  "overwriteSheetOrder": {
+    "input": ["d", "_scalars", "t", "c", "_widgets"]
+  },
+  "overwriteAliases": {
+    "b": {
+      "newAlias": "Budget"
+    },
+    "d": {
+      "newAlias": "Expected number of passengers travelling from node u to v"
+    },
+    "_scalars": {
+      "newAlias": "Budget"
+    },
+    "t": {
+      "newAlias": "Value of travel time for the direct trip from i to j"
+    },
+    "c": {
+      "newAlias": "Fixed cost"
+    },
+    "y": {
+      "newAlias": "Whether connection i to j is built"
+    },
+    "_scalarsve_out": {
+      "newAlias": "Objective value"
+    },
+    "x": {
+      "newAlias": "Number of passengers starting their trip in"
+    }
+  },
+  "roundingDecimals": 2,
+  "UILogo": "Picture1.png",
+  "readme": {
+    "tabTitle": "Introduction",
+    "filename": "Introduction",
+    "enableMath": true
+  },
+  "overwriteHeaderAliases": {
+    "d": {
+      "newHeaders": ["city u", "city 1", "city 2", "city 3", "city 4", "city 5"]
+    },
+    "t": {
+      "newHeaders": ["trip i", "trip j", "value of travel time for the direct trip from i to j"]
+    },
+    "c": {
+      "newHeaders": ["city u", "city v", "fixed cost"]
+    },
+    "y": {
+      "newHeaders": ["city j", "city j", "Level", "Marginal", "Lower", "Upper", "Scale"]
+    },
+    "_scalarsve_out": {
+      "newHeaders": ["Name", "Description", "Level", "Marginal", "Lower", "Upper", "Scale"]
+    },
+    "x": {
+      "newHeaders": ["City u", "City i", "City j", "Level", "Marginal", "Lower", "Upper", "Scale"]
+    },
+    "_scalars": {
+      "newHeaders": ["Name", "Description", "Value"]
+    }
+  },
+  "datatable": {
+    "class": "display",
+    "filter": "bottom",
+    "rownames": false,
+    "options": {
+      "pageLength": 15
+    }
+  },
+  "pageTitle": "Network design",
+  "handsontable": {
+    "stretchH": "none",
+    "readonly": false,
+    "contextMenu": {
+      "enabled": true,
+      "allowRowEdit": true,
+      "allowColEdit": true
+    },
+    "height": 700,
+    "colWidths": 100
+  }
+}
