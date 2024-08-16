@@ -32,7 +32,7 @@
                             "lib": "font-awesome",
                             "name": "users"
                         },
-                        "round": 2
+                        "round": 0
                     }
                 },
                 {
@@ -127,7 +127,7 @@
         "rownames": false
     },
     "defaultRendererOutput": "datatable",
-    "defaultScenName": "Metropolises | ICE | High",
+    "defaultScenName": "Metro | Medium | ICE",
     "defCompMode": "split",
     "excelIncludeEmptySheets": true,
     "excelIncludeMeta": true,
