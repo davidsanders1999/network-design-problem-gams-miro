@@ -152,7 +152,8 @@ d(v,i)$(v_subset(v) and v_subset(i)) = d_total(v,i);
 E(v, i)$(v_subset(v) and v_subset(i)) = yes;
 
 *Calculation of the budget for the fully connected network
-b_max = (sum ((v,i)$(v_subset(v) and v_subset(i)), c(v,i)))/2;
+b_max = (sum ((v,i)$(v_subset(v) and v_subset(i)), c(v,i))) - card(v_subset) * 0.5;
+b_max = b_max / 2
 
 *Adapting c and t according to the selection of the train type*
 *Assuming that the travel time in a regional express (RE) doubles and the construction costs are halved*
