@@ -1,7 +1,3 @@
 data_general.gdx
 data_gravety model.gdx
 network_design_germany.gms
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
