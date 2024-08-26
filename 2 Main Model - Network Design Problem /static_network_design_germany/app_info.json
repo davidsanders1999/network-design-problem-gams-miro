@@ -1,5 +1,5 @@
 {
   "title": "Network Design",
-  "description": "The model solves the network design problem by developing an optimal railway network in Germany, taking budget constraints into account.",
+  "description": "This model solves the network design problem by developing an optimal railway network in germany.",
   "appId": "networkdesign"
 }

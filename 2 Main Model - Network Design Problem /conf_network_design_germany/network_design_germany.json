@@ -387,7 +387,7 @@
             "newAlias": "Costs [Mrd. Euro]"
         },
         "d": {
-            "newAlias": "All travelers [people]"
+            "newAlias": "All Passangers [people]"
         },
         "map": {
             "newAlias": "Route map"
@@ -426,21 +426,21 @@
             "newHeaders": [
                 "Cities",
                 "Cities",
-                "buildedge"
+                "Constructed connections [yes / no]"
             ]
         },
         "c_display": {
             "newHeaders": [
                 "Cities",
                 "Cities",
-                "additional parameter for displaying only the cost of constructed connectinos"
+                "Costs [Mrd. Euro]"
             ]
         },
         "d": {
             "newHeaders": [
                 "Cities",
                 "Cities",
-                "d"
+                "All Passangers [people]"
             ]
         },
         "map": {
@@ -459,14 +459,14 @@
             "newHeaders": [
                 "Cities",
                 "Cities",
-                "value of travel time for the direct trip from i to j"
+                "Travel time [h]"
             ]
         },
         "travpass": {
             "newHeaders": [
                 "Cities",
                 "Cities",
-                "Passengers"
+                "Passangers per connection [people]"
             ]
         }
     },
