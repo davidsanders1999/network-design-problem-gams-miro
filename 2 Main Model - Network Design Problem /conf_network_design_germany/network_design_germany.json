@@ -127,7 +127,7 @@
         "rownames": false
     },
     "defaultRendererOutput": "datatable",
-    "defaultScenName": "Metro | Medium | ICE",
+    "defaultScenName": "Metro_Medium_ICE",
     "defCompMode": "split",
     "excelIncludeEmptySheets": true,
     "excelIncludeMeta": true,
